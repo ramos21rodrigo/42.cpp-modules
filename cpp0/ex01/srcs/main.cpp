@@ -7,6 +7,9 @@ int main()
 
 	while (true)
 	{
+		cout << "\nPhonebook option:\n➔ADD\n➔SEARCH\n➔EXIT\n"
+			 << endl;
+
 		cout << "Option: ";
 		getline(cin, option);
 		if (option == "ADD")
