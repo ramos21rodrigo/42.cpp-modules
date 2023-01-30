@@ -2,14 +2,13 @@
 
 int main()
 {
-	string	option;
+	string option;
 	PhoneBook phonebook;
 
-	while(true)
+	while (true)
 	{
 		cout << "Option: ";
 		getline(cin, option);
-
 		if (option == "ADD")
 		{
 			phonebook.addContact();

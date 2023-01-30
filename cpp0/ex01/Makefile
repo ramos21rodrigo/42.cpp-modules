@@ -2,18 +2,26 @@ NAME = phonebook
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-RM = rm -f
+OBJS_FOLDER = base
+VPATH = srcs/
+RM = rm -rf
 
-SRCS =	srcs/contact.cpp\
-		srcs/phonebook.cpp\
-		srcs/main.cpp
-OBJS = ${SRCS:.cpp=.o}
+OBJS = ${SRCS:%.cpp=${OBJS_FOLDER}/%.o}
+SRCS =	contact.cpp\
+		phonebook.cpp\
+		main.cpp
 
-${NAME}: ${OBJS}
+${NAME}: ${OBJS_FOLDER} ${OBJS}
 	${CXX} ${OBJS} -o ${NAME}
 
+${OBJS_FOLDER}:
+	mkdir -p base
+
+${OBJS_FOLDER}/%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@ 
+
 clean:
-	${RM} ${OBJS}
+	${RM} ${OBJS_FOLDER}
 
 fclean: clean
 	${RM} ${NAME}
