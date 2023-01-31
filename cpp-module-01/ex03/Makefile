@@ -1,13 +1,16 @@
-NAME = harl
+NAME = necessaryViolence
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJS_FOLDER = base
+VPATH = srcs/
 RM = rm -rf
 
 OBJS = ${SRCS:%.cpp=${OBJS_FOLDER}/%.o}
 SRCS =	main.cpp\
-		Harl.cpp
+		HumanA.cpp\
+		HumanB.cpp\
+		Weapon.cpp
 
 ${NAME}: ${OBJS_FOLDER} ${OBJS}
 	${CXX} ${OBJS} -o ${NAME}

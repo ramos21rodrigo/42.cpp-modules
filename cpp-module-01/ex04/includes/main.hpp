@@ -3,13 +3,14 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
+using std::cerr;
 using std::cout;
 using std::endl;
+using std::getline;
 using std::string;
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include "replace.hpp"
 
 #endif

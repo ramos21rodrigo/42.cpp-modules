@@ -1,4 +1,4 @@
-NAME = necessaryViolence
+NAME = replace
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
@@ -8,9 +8,7 @@ RM = rm -rf
 
 OBJS = ${SRCS:%.cpp=${OBJS_FOLDER}/%.o}
 SRCS =	main.cpp\
-		HumanA.cpp\
-		HumanB.cpp\
-		Weapon.cpp
+		replace.cpp
 
 ${NAME}: ${OBJS_FOLDER} ${OBJS}
 	${CXX} ${OBJS} -o ${NAME}

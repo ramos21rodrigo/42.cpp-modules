@@ -1,25 +1,13 @@
 #include "../includes/main.hpp"
 
-int main()
+int main(int argc, char const *argv[])
 {
+	if (argc != 4)
 	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-		club.setType("");
-		bob.attack();
+		cerr << "Wrong amout of arguments!" << endl;
+		return EXIT_FAILURE;
 	}
-	cout << endl;
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.attack();
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return 0;
+	Replace replace(argv[1]);
+	replace.execute(argv[2], argv[3]);
+	return EXIT_SUCCESS;
 }
