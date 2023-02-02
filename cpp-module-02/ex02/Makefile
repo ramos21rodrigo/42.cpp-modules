@@ -1,4 +1,4 @@
-NAME = fixed
+NAME = fixedOnSteroids
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98

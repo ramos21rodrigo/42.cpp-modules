@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
 
 using std::cout;
 using std::endl;
@@ -17,10 +18,18 @@ public:
 	int getRawBits(void) const;
 	void setRawBits(int const raw);
 
+	float toFloat(void) const;
+	int toInt(void) const;
+
 	Fixed();
+	Fixed(const int num);
+	Fixed(const float num);
 	Fixed(const Fixed &copy);
 	~Fixed();
+
 	Fixed &operator=(const Fixed &assign);
 };
+
+std::ostream &operator<<(std::ostream &o, Fixed const &i);
 
 #endif
