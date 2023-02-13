@@ -1,7 +1,15 @@
 #ifndef REPLACE_HPP
 #define REPLACE_HPP
 
-#include "main.hpp"
+#include <string>
+#include <iostream>
+#include <fstream>
+
+using std::cerr;
+using std::cout;
+using std::endl;
+using std::getline;
+using std::string;
 
 class Replace
 {

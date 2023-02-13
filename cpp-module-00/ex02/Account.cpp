@@ -96,14 +96,14 @@ void Account::displayStatus(void) const
 
 void Account::_displayTimestamp(void)
 {
-	std::time_t result = std::time(NULL);
+	time_t result = time(NULL);
 
-	std::cout << std::setfill('0') << "[" << 1900 + std::localtime(&result)->tm_year
-			  << std::setw(2) << 1 + std::localtime(&result)->tm_mon
-			  << std::setw(2) << std::localtime(&result)->tm_mday
+	std::cout << std::setfill('0') << "[" << 1900 + localtime(&result)->tm_year
+			  << std::setw(2) << 1 + localtime(&result)->tm_mon
+			  << std::setw(2) << localtime(&result)->tm_mday
 			  << "_"
-			  << std::setw(2) << std::localtime(&result)->tm_hour
-			  << std::setw(2) << std::localtime(&result)->tm_min
-			  << std::setw(2) << std::localtime(&result)->tm_sec
+			  << std::setw(2) << localtime(&result)->tm_hour
+			  << std::setw(2) << localtime(&result)->tm_min
+			  << std::setw(2) << localtime(&result)->tm_sec
 			  << "] " << std::flush;
 }

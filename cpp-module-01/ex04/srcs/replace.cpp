@@ -1,4 +1,4 @@
-#include "../includes/main.hpp"
+#include "../includes/replace.hpp"
 
 Replace::Replace(string filename) : _filename(filename) {}
 
@@ -13,13 +13,13 @@ void Replace::execute(string s1, string s2)
 	size_t s1_in_file_index;
 	string line;
 
-	in_file.open(_filename);
+	in_file.open(_filename.c_str());
 	if (!in_file.is_open())
 	{
 		cerr << "Error opening file!" << endl;
 		return;
 	}
-	out_file.open(_filename + ".replace", std::ios::trunc);
+	out_file.open((_filename + ".replace").c_str(), std::ios::trunc);
 	if (!out_file.is_open())
 	{
 		cerr << "Error creating replace file!" << endl;

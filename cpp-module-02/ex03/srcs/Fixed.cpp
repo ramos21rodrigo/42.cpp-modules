@@ -1,4 +1,4 @@
-#include "../includes/main.hpp"
+#include "../includes/Fixed.hpp"
 
 Fixed::Fixed()
 {
@@ -12,7 +12,7 @@ Fixed::Fixed(const int num)
 
 Fixed::Fixed(const float num)
 {
-	_fixed_point_value = std::roundf(num * (1 << _fractional_bits));
+	_fixed_point_value = roundf(num * (1 << _fractional_bits));
 }
 
 Fixed::Fixed(const Fixed &copy)

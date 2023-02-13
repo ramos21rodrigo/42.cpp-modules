@@ -12,5 +12,5 @@ int main()
 		harl.complain(input);
 	} while (!input.empty());
 
-	return EXIT_SUCCESS;
+	return 0;
 }

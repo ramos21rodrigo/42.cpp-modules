@@ -1,4 +1,4 @@
-#include "../includes/main.hpp"
+#include "../includes/HumanA.hpp"
 
 HumanA::HumanA(string name, Weapon &weapon) : _name(name), _weapon(weapon) {}
 

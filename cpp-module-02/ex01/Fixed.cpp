@@ -16,7 +16,7 @@ Fixed::Fixed(const int num)
 Fixed::Fixed(const float num)
 {
 	cout << "Float constructor called" << endl;
-	_fixed_point_value = std::roundf(num * (1 << _fractional_bits));
+	_fixed_point_value = roundf(num * (1 << _fractional_bits));
 }
 
 Fixed::Fixed(const Fixed &copy)
@@ -56,11 +56,6 @@ float Fixed::toFloat(void) const
 int Fixed::toInt(void) const
 {
 	return _fixed_point_value >> _fractional_bits;
-}
-
-std::ostream &operator<<(std::ostream &o, Fixed const &i)
-{
-	return o << i.toFloat();
 }
 
 std::ostream &operator<<(std::ostream &o, Fixed const &i)

@@ -1,6 +1,6 @@
-#include "../includes/main.hpp"
+#include "../includes/phonebook.hpp"
 
-int PhoneBook::m_index = 0;
+int PhoneBook::_index = 0;
 
 string getInput(string message)
 {
@@ -24,18 +24,18 @@ void displayTableField(string field)
 
 void PhoneBook::addContact()
 {
-    if (m_index > 7)
+    if (_index > 7)
     {
         for (int i = 0; i < 7; i++)
-            m_contacts[i] = m_contacts[i + 1];
-        m_index -= 1;
+            _contacts[i] = _contacts[i + 1];
+        _index -= 1;
     }
-    m_contacts[m_index].setFirstName(getInput("First name: "));
-    m_contacts[m_index].setLastName(getInput("Last name: "));
-    m_contacts[m_index].setNickname(getInput("Nickname: "));
-    m_contacts[m_index].setPhoneNumber(getInput("Phone number: "));
-    m_contacts[m_index].setDarkestSecret(getInput("Darkest secret (other than beeing cute af 🥵): "));
-    PhoneBook::m_index += 1;
+    _contacts[_index].setFirstName(getInput("First name: "));
+    _contacts[_index].setLastName(getInput("Last name: "));
+    _contacts[_index].setNickname(getInput("Nickname: "));
+    _contacts[_index].setPhoneNumber(getInput("Phone number: "));
+    _contacts[_index].setDarkestSecret(getInput("Darkest secret (other than beeing cute af 🥵): "));
+    PhoneBook::_index += 1;
 }
 
 void PhoneBook::searchContact()
@@ -44,19 +44,19 @@ void PhoneBook::searchContact()
     stringstream ss;
     int index;
 
-    if (PhoneBook::m_index == 0)
+    if (PhoneBook::_index == 0)
     {
         cout << "Add a contact first!" << endl;
         return;
     }
 
     cout << "|     Index| FirstName|  LastName|  Nickname|" << endl;
-    for (int i = 0; i < PhoneBook::m_index; i++)
+    for (int i = 0; i < PhoneBook::_index; i++)
     {
         cout << "|" << std::setw(10) << std::right << i << '|';
-        displayTableField(m_contacts[i].getFirstName());
-        displayTableField(m_contacts[i].getLastName());
-        displayTableField(m_contacts[i].getNickname());
+        displayTableField(_contacts[i].getFirstName());
+        displayTableField(_contacts[i].getLastName());
+        displayTableField(_contacts[i].getNickname());
         cout << endl;
     }
 
@@ -74,14 +74,14 @@ void PhoneBook::searchContact()
         break;
     }
 
-    if (index < 0 || index > PhoneBook::m_index - 1)
+    if (index < 0 || index > PhoneBook::_index - 1)
         cout << "Input out of boundaries." << endl;
     else
     {
-        std::cout << "\nFirst Name: " << m_contacts[index].getFirstName() << std::endl;
-        std::cout << "Last Name: " << m_contacts[index].getLastName() << std::endl;
-        std::cout << "Nickname: " << m_contacts[index].getNickname() << std::endl;
-        std::cout << "Phone Number: " << m_contacts[index].getPhoneNumber() << std::endl;
-        std::cout << "Darkest Secret: " << m_contacts[index].getDarkestSecret() << std::endl;
+        std::cout << "\nFirst Name: " << _contacts[index].getFirstName() << std::endl;
+        std::cout << "Last Name: " << _contacts[index].getLastName() << std::endl;
+        std::cout << "Nickname: " << _contacts[index].getNickname() << std::endl;
+        std::cout << "Phone Number: " << _contacts[index].getPhoneNumber() << std::endl;
+        std::cout << "Darkest Secret: " << _contacts[index].getDarkestSecret() << std::endl;
     }
 }

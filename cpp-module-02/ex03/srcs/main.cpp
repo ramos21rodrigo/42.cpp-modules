@@ -1,8 +1,7 @@
-#include "../includes/main.hpp"
+#include "../includes/Point.hpp"
 
 /*
 Input: A = (0, 0), B = (10, 30), C = (20, 0), P(10, 15)
-Output: Inside
 Explanation:
 			  B(10,30)
 				/ \
@@ -11,10 +10,10 @@ Explanation:
 			 /   P   \      P'
 			/         \
 	 A(0,0) ----------- C(20,0)
+Output: Inside
 
 
 Input: A = (0, 0), B = (10, 30), C = (20, 0), P(30, 15)
-Output: Outside
 Explanation:
 			  B(10,30)
 				/ \
@@ -23,19 +22,22 @@ Explanation:
 			 /       \      P
 			/         \
 	 A(0,0) ----------- C(20,0)
+Output: Outside
 */
 
 int main(void)
 {
-	bool result = bsp(Point(0, 0), Point(10, 30), Point(20, 0), Point(10, 15));
+	//inside
 
+	bool result = bsp(Point(0, 0), Point(10, 30), Point(20, 0), Point(10, 15));
 	if (result)
 		cout << "Point inside of the triangle" << endl;
 	else
 		cout << "Point outside of the triangle" << endl;
 
-	result = bsp(Point(0, 0), Point(10, 30), Point(20, 0), Point(30, 15));
+	//outside
 
+	result = bsp(Point(0, 0), Point(10, 30), Point(20, 0), Point(30, 15));
 	if (result)
 		cout << "Point inside of the triangle" << endl;
 	else

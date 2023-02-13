@@ -1,4 +1,4 @@
-#include "../includes/main.hpp"
+#include "../includes/Point.hpp"
 
 static Fixed abs(Fixed x)
 {

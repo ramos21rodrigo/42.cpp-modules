@@ -1,7 +1,12 @@
 #ifndef FIXED_HPP
 #define FIXED_HPP
 
-#include "main.hpp"
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using std::cout;
+using std::endl;
 
 class Fixed
 {

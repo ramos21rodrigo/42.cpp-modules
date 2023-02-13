@@ -1,4 +1,4 @@
-#include "../includes/main.hpp"
+#include "../includes/HumanB.hpp"
 
 HumanB::HumanB(string name) : _name(name)
 {

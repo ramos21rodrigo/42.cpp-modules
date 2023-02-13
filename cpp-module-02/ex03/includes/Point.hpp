@@ -1,7 +1,7 @@
 #ifndef POINT_HPP
 #define POINT_HPP
 
-#include "main.hpp"
+#include "Fixed.hpp"
 
 class Point
 {
@@ -19,5 +19,7 @@ public:
 	~Point();
 	Point &operator=(const Point &assign);
 };
+
+bool bsp(Point a, Point b, Point c, Point point);
 
 #endif

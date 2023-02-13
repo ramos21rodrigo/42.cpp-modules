@@ -1,7 +1,12 @@
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
 
-#include "main.hpp"
+#include <string>
+#include <iostream>
+
+using std::cout;
+using std::endl;
+using std::string;
 
 class Weapon
 {

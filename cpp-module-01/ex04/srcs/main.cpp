@@ -1,13 +1,13 @@
-#include "../includes/main.hpp"
+#include "../includes/replace.hpp"
 
 int main(int argc, char const *argv[])
 {
 	if (argc != 4)
 	{
 		cerr << "Wrong amout of arguments!" << endl;
-		return EXIT_FAILURE;
+		return 1;
 	}
 	Replace replace(argv[1]);
 	replace.execute(argv[2], argv[3]);
-	return EXIT_SUCCESS;
+	return 0;
 }
