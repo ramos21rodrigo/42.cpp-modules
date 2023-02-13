@@ -5,7 +5,7 @@ ClapTrap::ClapTrap(string name) : _name(name)
 	_hit_points = 10;
 	_energy_points = 10;
 	_attack_damage = 0;
-	cout << "Default Constructor called" << endl;
+	cout << "Field Constructor called" << endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)

@@ -1,4 +1,4 @@
-#include "../includes/main.hpp"
+#include "../includes/Dog.hpp"
 
 Dog::Dog() : Animal("Dog")
 {

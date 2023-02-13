@@ -1,4 +1,4 @@
-#include "../includes/main.hpp"
+#include "../includes/WrongCat.hpp"
 
 WrongCat::WrongCat()
 {

@@ -1,4 +1,6 @@
-#include "../includes/main.hpp"
+#include "../includes/Dog.hpp"
+#include "../includes/Cat.hpp"
+#include "../includes/WrongCat.hpp"
 
 int main()
 {
@@ -8,7 +10,7 @@ int main()
 	cout << endl;
 	const Animal *dog = new Dog();
 	cout << endl;
-	const WrongCat *cat = new WrongCat();
+	const Cat *cat = new Cat();
 	cout << endl;
 
 	cout << dog->getType() << "'s sound: ";

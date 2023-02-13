@@ -1,7 +1,12 @@
 #ifndef Brain_HPP
 #define Brain_HPP
 
-#include "main.hpp"
+#include <iostream>
+#include <string>
+
+using std::cout;
+using std::endl;
+using std::string;
 
 class Brain
 {

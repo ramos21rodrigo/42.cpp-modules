@@ -1,4 +1,4 @@
-#include "../includes/main.hpp"
+#include "../includes/Dog.hpp"
 
 Dog::Dog() : Animal("Dog")
 {
@@ -14,7 +14,7 @@ Dog::Dog(const Dog &copy)
 
 Dog::~Dog()
 {
-	cout << "\e[0.;31mDestructor called of Dog\e[0m" << endl;
+	cout << "\e[0;31mDestructor called of Dog\e[0m" << endl;
 	delete _brain;
 }
 

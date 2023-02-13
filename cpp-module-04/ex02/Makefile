@@ -1,4 +1,4 @@
-NAME = abstraction
+NAME = brains
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98
