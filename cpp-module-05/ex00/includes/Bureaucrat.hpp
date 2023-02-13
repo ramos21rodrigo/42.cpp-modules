@@ -22,28 +22,23 @@ public:
 	Bureaucrat(string _name, int grade);
 	~Bureaucrat();
 	Bureaucrat &operator=(const Bureaucrat &assign);
-	std::ostream operator<<(std::ostream &os);
 
-	string get_name() const { return _name; }
-	int get_grade() const { return _grade; }
+	string get_name() const;
+	int get_grade() const;
 
 	class GradeTooHighException : public std::exception
 	{
 	public:
-		virtual const char *what() const throw()
-		{
-			return "Grade too high!";
-		};
+		virtual const char *what() const throw();
 	};
 
 	class GradeTooLowException : public std::exception
 	{
 	public:
-		virtual const char *what() const throw()
-		{
-			return "Grade too low!";
-		};
+		virtual const char *what() const throw();
 	};
 };
+
+std::ostream &operator<<(std::ostream &out, Bureaucrat const &bureaucrat);
 
 #endif
