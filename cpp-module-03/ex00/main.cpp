@@ -7,7 +7,7 @@ int main()
 
 	for (size_t i = 0; i < 11; i++)
 	{
-		jorge.attack("o seu pai");
+		jorge.attack("the air");
 	}
 	jorge.takeDamage(40000);
 	cout << endl;
@@ -18,5 +18,5 @@ int main()
 		carlos.beRepaired(1);
 	}
 
-	return EXIT_SUCCESS;
+	return 0;
 }

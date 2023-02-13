@@ -1,7 +1,7 @@
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 
-#include "main.hpp"
+#include "ClapTrap.hpp"
 
 class ScavTrap : virtual public ClapTrap
 {

@@ -1,11 +1,11 @@
-#include "../includes/main.hpp"
+#include "../includes/ClapTrap.hpp"
 
 ClapTrap::ClapTrap(string name) : _name(name)
 {
 	_hit_points = 10;
 	_energy_points = 10;
 	_attack_damage = 0;
-	cout << "Default Constructor called" << endl;
+	cout << "Field Constructor called" << endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
@@ -30,19 +30,22 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &assign)
 
 void ClapTrap::attack(const string &target)
 {
-	if (!haveEnergy())
-	{
+	if (!isAlive())
+		cout << "ClapTrap " << _name << " is dead!" << endl;
+	else if (!haveEnergy())
 		cout << "ClapTrap " << _name << " is out of energy!" << endl;
-		return;
+	else
+	{
+		cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << endl;
+		_energy_points -= 1;
 	}
-	cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << endl;
-	_energy_points -= 1;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (_hit_points <= amount)
 	{
+		_hit_points = 0;
 		cout << "ClapTrap " << _name << " is dead!" << endl;
 		return;
 	}
@@ -53,13 +56,25 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if (!haveEnergy())
-	{
+	if (!isAlive())
+		cout << "ClapTrap " << _name << " is dead!" << endl;
+	else if (!haveEnergy())
 		cout << "ClapTrap " << _name << " is out of energy!" << endl;
-		return;
+	else
+	{
+		_hit_points += amount;
+		cout << "ClatTrap " << _name << " repairs itself for " << amount << " hit points" << endl;
+		cout << "Current health: " << _hit_points << endl;
+		_energy_points -= 1;
 	}
-	_hit_points += amount;
-	cout << "ClatTrap " << _name << " repairs itself for " << amount << " hit points" << endl;
-	cout << "Current health: " << _hit_points << endl;
-	_energy_points -= 1;
+}
+
+bool ClapTrap::haveEnergy()
+{
+	return (_energy_points > 0);
+}
+
+bool ClapTrap::isAlive()
+{
+	return (_hit_points > 0);
 }

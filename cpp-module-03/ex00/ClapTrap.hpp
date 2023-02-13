@@ -16,10 +16,8 @@ private:
 	unsigned _energy_points;
 	unsigned _attack_damage;
 
-	bool haveEnergy()
-	{
-		return (_energy_points > 0);
-	}
+	bool haveEnergy();
+	bool isAlive();
 
 public:
 	void attack(const string &target);

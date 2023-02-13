@@ -1,4 +1,4 @@
-#include "../includes/main.hpp"
+#include "../includes/FragTrap.hpp"
 
 int main()
 {
@@ -21,5 +21,5 @@ int main()
 	carlos.attack("the air");
 	carlos.highFivesGuys();
 
-	return EXIT_SUCCESS;
+	return 0;
 }

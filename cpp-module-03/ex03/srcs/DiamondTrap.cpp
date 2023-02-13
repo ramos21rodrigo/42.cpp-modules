@@ -1,4 +1,4 @@
-#include "../includes/main.hpp"
+#include "../includes/DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap(string name) : ClapTrap(name), ScavTrap(name), FragTrap(name)
 {

@@ -1,7 +1,12 @@
 #ifndef CLAPTRAP_HPP
 #define CLAPTRAP_HPP
 
-#include "main.hpp"
+#include <iostream>
+#include <string>
+
+using std::cout;
+using std::endl;
+using std::string;
 
 class ClapTrap
 {
@@ -11,10 +16,8 @@ protected:
 	unsigned _energy_points;
 	unsigned _attack_damage;
 
-	bool haveEnergy()
-	{
-		return (_energy_points > 0);
-	}
+	bool haveEnergy();
+	bool isAlive();
 
 public:
 	void attack(const string &target);
