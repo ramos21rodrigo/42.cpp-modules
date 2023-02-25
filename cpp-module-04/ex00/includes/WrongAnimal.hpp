@@ -19,7 +19,7 @@ public:
 	WrongAnimal();
 	WrongAnimal(const WrongAnimal &copy);
 	WrongAnimal(string type);
-	virtual ~WrongAnimal();
+	~WrongAnimal();
 
 	WrongAnimal &operator=(const WrongAnimal &assign);
 	string getType() const;

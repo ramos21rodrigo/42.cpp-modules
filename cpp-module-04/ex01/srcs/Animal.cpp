@@ -12,12 +12,6 @@ Animal::Animal(const Animal &copy)
 	cout << "\e[0;33mCopy Constructor called of Animal\e[0m" << endl;
 }
 
-Animal::Animal(string type)
-{
-	_type = type;
-	cout << "\e[0;33mFields Constructor called of Animal\e[0m" << endl;
-}
-
 Animal::~Animal()
 {
 	cout << "\e[0;31mDestructor called of Animal\e[0m" << endl;

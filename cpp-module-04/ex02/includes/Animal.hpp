@@ -18,7 +18,6 @@ public:
 
 	Animal();
 	Animal(const Animal &copy);
-	Animal(string type);
 	virtual ~Animal();
 
 	Animal &operator=(const Animal &assign);

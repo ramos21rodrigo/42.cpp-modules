@@ -4,13 +4,11 @@
 
 int main()
 {
-	const WrongAnimal *animal = new WrongAnimal();
-	cout << endl;
-	const Animal *animal_with_type = new Animal("anytype");
+	const WrongAnimal *animal = new WrongCat();
 	cout << endl;
 	const Animal *dog = new Dog();
 	cout << endl;
-	const Cat *cat = new Cat();
+	const Animal *cat = new Cat();
 	cout << endl;
 
 	cout << dog->getType() << "'s sound: ";
@@ -19,8 +17,6 @@ int main()
 	cat->makeSound();
 	cout << animal->getType() << "'s sound: ";
 	animal->makeSound();
-	cout << animal_with_type->getType() << "'s sound: ";
-	animal_with_type->makeSound();
 
 	cout << endl;
 
@@ -30,7 +26,6 @@ int main()
 	cout << endl;
 	delete cat;
 	cout << endl;
-	delete animal_with_type;
 
 	return 0;
 }
