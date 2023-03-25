@@ -33,3 +33,8 @@ string WrongCat::getType() const
 {
 	return _type;
 }
+
+void WrongCat::makeSound() const
+{
+	cout << "Miau" << endl;
+}

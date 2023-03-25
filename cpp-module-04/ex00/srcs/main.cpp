@@ -4,11 +4,11 @@
 
 int main()
 {
-	const WrongAnimal *animal = new WrongCat();
-	cout << endl;
 	const Animal *dog = new Dog();
 	cout << endl;
 	const Animal *cat = new Cat();
+	cout << endl;
+	const WrongAnimal *animal = new WrongCat();
 	cout << endl;
 
 	cout << dog->getType() << "'s sound: ";

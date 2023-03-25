@@ -6,7 +6,7 @@
 class WrongCat : public WrongAnimal
 {
 public:
-	using WrongAnimal::makeSound;
+	void makeSound() const;
 
 	WrongCat();
 	WrongCat(const WrongCat &copy);

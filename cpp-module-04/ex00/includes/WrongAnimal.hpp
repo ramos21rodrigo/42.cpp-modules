@@ -14,12 +14,12 @@ protected:
 	string _type;
 
 public:
-	void makeSound() const;
+	virtual void makeSound() const;
 
 	WrongAnimal();
 	WrongAnimal(const WrongAnimal &copy);
 	WrongAnimal(string type);
-	~WrongAnimal();
+	virtual ~WrongAnimal();
 
 	WrongAnimal &operator=(const WrongAnimal &assign);
 	string getType() const;

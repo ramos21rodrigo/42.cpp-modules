@@ -1,4 +1,7 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
+
+Bureaucrat::Bureaucrat(void): _name("default"), _grade(1) {}
 
 Bureaucrat::Bureaucrat(string name, int grade) : _name(name)
 {
@@ -70,6 +73,19 @@ string Bureaucrat::get_name() const
 int Bureaucrat::get_grade() const
 {
 	return _grade;
+}
+
+void Bureaucrat::signForm(Form &form)
+{
+	try
+	{
+		form.beSigned(*this);
+		cout << _name << " signed " << form.get_name() << endl;
+	}
+	catch(const std::exception& e)
+	{
+		cout << _name << " couldn't sign " << form.get_name() << " because " << e.what() << endl; 
+	}
 }
 
 std::ostream &operator<<(std::ostream &out, Bureaucrat const &bureaucrat)

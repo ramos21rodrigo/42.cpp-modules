@@ -18,6 +18,7 @@ public:
 	void increment();
 	void decrement();
 
+	Bureaucrat();
 	Bureaucrat(const Bureaucrat &copy);
 	Bureaucrat(string _name, int grade);
 	~Bureaucrat();
