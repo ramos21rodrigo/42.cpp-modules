@@ -14,7 +14,7 @@ protected:
 	string _type;
 
 public:
-	void makeSound() const;
+	virtual void makeSound() const;
 
 	WrongAnimal();
 	WrongAnimal(const WrongAnimal &copy);

@@ -8,6 +8,8 @@ using std::cout;
 using std::endl;
 using std::string;
 
+class Form;
+
 class Bureaucrat
 {
 private:
@@ -17,6 +19,7 @@ private:
 public:
 	void increment();
 	void decrement();
+	void signForm(Form &form);
 
 	Bureaucrat();
 	Bureaucrat(const Bureaucrat &copy);
