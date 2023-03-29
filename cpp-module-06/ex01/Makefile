@@ -6,7 +6,8 @@ OBJS_FOLDER = base
 RM = rm -rf
 
 OBJS = ${SRCS:%.cpp=${OBJS_FOLDER}/%.o}
-SRCS =	serialization.cpp
+SRCS =	main.cpp\
+		Serializer.cpp
 
 ${NAME}: ${OBJS_FOLDER} ${OBJS}
 	${CXX} ${OBJS} -o ${NAME}

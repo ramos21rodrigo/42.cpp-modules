@@ -6,7 +6,7 @@ OBJS_FOLDER = base
 RM = rm -rf
 
 OBJS = ${SRCS:%.cpp=${OBJS_FOLDER}/%.o}
-SRCS =	identify.cpp
+SRCS =	main.cpp
 
 ${NAME}: ${OBJS_FOLDER} ${OBJS}
 	${CXX} ${OBJS} -o ${NAME}

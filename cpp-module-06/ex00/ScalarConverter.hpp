@@ -3,6 +3,10 @@
 
 # include <iostream>
 # include <string>
+# include <cstdlib>
+# include <sstream>
+# include <bits/stdc++.h>
+# include <cmath>
 
 using std::cout;
 using std::endl;
@@ -11,20 +15,16 @@ using std::string;
 class ScalarConverter
 {
 	private:
-		string _convert;
 		
 	public:
-		// Constructors
 		ScalarConverter();
-		ScalarConverter(string convert);
 		ScalarConverter(const ScalarConverter &copy);
 		
-		// Destructor
 		~ScalarConverter();
 		
-		// Operators
 		ScalarConverter & operator=(const ScalarConverter &assign);
 		
+		static void convert(string convert);
 		
 };
 
