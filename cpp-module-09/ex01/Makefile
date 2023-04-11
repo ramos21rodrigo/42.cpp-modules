@@ -1,4 +1,4 @@
-NAME = PmergeMe
+NAME = RPN
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -Wshadow -Iincludes -std=c++98
@@ -7,7 +7,7 @@ RM = rm -rf
 
 OBJS = ${SRCS:%.cpp=${OBJS_FOLDER}/%.o}
 SRCS =	main.cpp\
-		PmergeMe.cpp
+		RPN.cpp
 
 ${NAME}: ${OBJS_FOLDER} ${OBJS}
 	${CXX} ${OBJS} -o ${NAME}
